@@ -1,0 +1,8 @@
+overwrite: true
+schema: src/schema.graphql
+generates:
+  src/types.ts:
+    plugins:
+      - typescript-common
+      - typescript-server
+      - typescript-resolvers

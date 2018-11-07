@@ -1,5 +1,4 @@
 const { GraphQLCodegenPlugin } = require('graphql-codegen-webpack');
-const { resolve } = require('path');
 
 module.exports = {
   mode: 'development',
@@ -13,12 +12,7 @@ module.exports = {
     extensions: ['.ts', '.ts', '.graphql', '.js', '.mjs'],
   },
   plugins: [
-    new GraphQLCodegenPlugin({
-      schema: resolve(__dirname, 'src/schema.graphql'),
-      template: 'graphql-codegen-typescript-template',
-      out: resolve(__dirname, 'src/types.ts'),
-      overwrite: true,
-    }),
+    new GraphQLCodegenPlugin(),
   ],
   module: {
     rules: [

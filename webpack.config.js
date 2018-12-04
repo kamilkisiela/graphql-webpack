@@ -1,4 +1,5 @@
 const { GraphQLCodegenPlugin } = require('graphql-codegen-webpack');
+const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
   mode: 'development',
@@ -11,18 +12,14 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.ts', '.graphql', '.js', '.mjs'],
   },
+  externals: [nodeExternals()],
   plugins: [
     new GraphQLCodegenPlugin(),
   ],
   module: {
     rules: [
       { test: /\.ts$/, loader: 'ts-loader' },
-      { test: /\.graphql$/, loader: 'graphql-tag/loader' },
-      {
-        test: /\.mjs$/,
-        include: /node_modules/,
-        type: 'javascript/auto',
-      },
+      { test: /\.graphql$/, loader: 'graphql-tag/loader' }
     ],
   }
 };

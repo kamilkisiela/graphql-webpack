@@ -41,7 +41,7 @@ const Author: AuthorResolvers.Resolvers = {
 };
 
 const Post: PostResolvers.Resolvers = {
-  author: post => authors.find(a => a.id === post.authorId),
+  author: post => authors.find(a => a.id === post.author.id),
 };
 
 export default {

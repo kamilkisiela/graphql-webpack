@@ -14,6 +14,7 @@
     "concurrently": "4.0.1",
     "graphql": "14.0.2",
     "graphql-code-generator": "0.14.0-alpha.a4fbd654",
+    "graphql-codegen-plugin-helpers": "0.14.0-alpha.a4fbd654",
     "graphql-codegen-typescript-common": "0.14.0-alpha.a4fbd654",
     "graphql-codegen-typescript-resolvers": "0.14.0-alpha.a4fbd654",
     "graphql-codegen-typescript-server": "0.14.0-alpha.a4fbd654",
